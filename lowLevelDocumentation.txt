@@ -1,0 +1,109 @@
+Low-Level Documentation
+Frontend (React.js)
+Directory Structure
+components/: Contains reusable React components.
+Auth/: Components for user authentication (Login, Register).
+Dashboard/: Components for displaying patient and doctor dashboards.
+Appointments/: Components for booking and listing appointments.
+Profile/: Components for managing user profiles.
+context/ (or store/ for Redux): Manages global state.
+services/: Handles API integration.
+App.js: Main application component.
+index.js: Entry point of the React application.
+Key Components
+Auth Components
+
+Login: Handles user login functionality.
+Register: Handles user registration functionality.
+Dashboard Components
+
+Patient Dashboard: Displays patient's information and appointments.
+Doctor Dashboard: Displays doctor's information and schedule.
+Appointment Components
+
+Book Appointment: Provides a form for booking an appointment with a doctor.
+Appointment List: Lists all appointments for a user.
+Profile Components
+
+Patient Profile: Displays and allows updates to patient's profile information.
+Doctor Profile: Displays and allows updates to doctor's profile information.
+State Management
+Auth Context: Manages authentication state (e.g., logged-in user information).
+Global State Management: Manages application-wide state using React Context or Redux.
+API Integration
+API Service: Centralized service for making HTTP requests to the backend (e.g., Axios or Fetch).
+Backend (Node.js with Express.js)
+Directory Structure
+controllers/: Contains business logic for handling requests.
+authController: Manages authentication processes.
+userController: Manages user-related actions.
+doctorController: Manages doctor-related actions.
+appointmentController: Manages appointment-related actions.
+models/: Contains Mongoose schemas for MongoDB collections.
+User: Schema for user data (patients, doctors).
+Appointment: Schema for appointment data.
+DoctorAvailability: Schema for doctor availability data.
+routes/: Defines API endpoints.
+authRoutes: Routes for authentication (register, login).
+userRoutes: Routes for user profile management.
+doctorRoutes: Routes for managing doctor information and availability.
+appointmentRoutes: Routes for managing appointments.
+middleware/: Contains middleware functions.
+authMiddleware: Middleware for verifying JWT tokens.
+errorMiddleware: Middleware for error handling.
+utils/: Utility functions.
+jwtUtils: Functions for generating and verifying JWT tokens.
+server.js: Main file for initializing the Express application and connecting to MongoDB.
+Key Components
+Models (Mongoose Schemas)
+
+User Model: Stores user information, including roles (patient, doctor).
+Appointment Model: Stores appointment details (patient ID, doctor ID, date, status).
+Doctor Availability Model: Stores available time slots for doctors.
+Controllers
+
+Auth Controller: Manages registration, login, and logout processes.
+User Controller: Handles retrieving and updating user profile information.
+Doctor Controller: Manages fetching doctor lists and setting availability.
+Appointment Controller: Handles booking, retrieving, and managing appointments.
+Routes
+
+Auth Routes: Endpoints for user registration and login.
+User Routes: Endpoints for retrieving and updating user profiles.
+Doctor Routes: Endpoints for fetching doctor information and setting availability.
+Appointment Routes: Endpoints for booking and managing appointments.
+Middleware
+
+Auth Middleware: Verifies JWT tokens for protected routes.
+Error Middleware: Handles errors and sends appropriate responses to the client.
+Utilities
+
+JWT Utils: Utility functions for generating and verifying JWT tokens.
+Server Initialization
+
+Initializes the Express application.
+Connects to the MongoDB database.
+Sets up routes and middleware.
+Starts the server and listens on the specified port.
+Database (MongoDB)
+Collections
+Users Collection
+Stores user data, including roles (patient, doctor).
+Appointments Collection
+Stores appointment details (patient ID, doctor ID, date, status).
+DoctorAvailability Collection
+Stores available time slots for doctors.
+Authentication and Authorization
+JWT Tokens
+Used for securing API endpoints.
+Issued upon successful login and stored on the client-side.
+Role-Based Access Control
+Middleware checks user roles and permissions for accessing specific routes.
+Deployment
+Frontend Deployment
+Deployed on platforms like Vercel, Netlify, or AWS S3.
+Backend Deployment
+Deployed on platforms like Heroku, AWS EC2, or DigitalOcean.
+Database Deployment
+MongoDB Atlas for managed database hosting and scaling.
+This low-level documentation provides a theoretical breakdown of the core components, models, controllers, routes, and middleware necessary to build and maintain the Doctor Booking Application using the MERN stack.
